@@ -21,6 +21,7 @@ body{
     font-weight: 400;
     color: white;
     line-height: 1.5;
+    height: 2000px;
 }
 #header{
     position: absolute;
@@ -129,7 +130,7 @@ a{
     margin: auto;
     background: url(../images/bg-main.jpg) 0 0 no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 105vh;
     overflow: hidden;
 }
 
@@ -168,7 +169,7 @@ a{
     z-index: 10;
     animation-duration: 1.2s;/*Tiempo de la animacion para el titulo*/
     animation-fill-mode: both;
-    animation-name: fadeInleft;
+    animation-name: fadeInLeft;
 }
 
 .myslides h2 span{
@@ -184,7 +185,7 @@ a{
     width: auto;
     height: 500px;
     position: relative;
-    z-index: 20;
+    z-index: 0;
     animation-duration: 1.2s;
     animation-fill-mode: both;
     animation-name: slideInRight;
@@ -205,6 +206,7 @@ a{
     font-size: 50px;
     font-weight: 300;
     font-style: italic;
+    margin-top: 185px;
     animation-duration: 1.2s;
     animation-fill-mode: both;
     animation-name: fadeInLeft;
@@ -220,7 +222,8 @@ a{
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 15px;
-    animation-duration: 1.2em;
+
+    animation-duration: 1.2s;
     animation-fill-mode: both;
     animation-name: fadeInLeft;
 }
@@ -229,7 +232,7 @@ a{
     font-weight: 300;
     margin-bottom: 15px;
     letter-spacing: 1px;
-    animation-duration: 1.2em;
+    animation-duration: 1.2s;
     animation-fill-mode: both;
     animation-name: slideInRight;
 }
@@ -237,7 +240,7 @@ a{
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 20px;
-    animation-duration: 1.2em;
+    animation-duration: 1.2s;
     animation-fill-mode: both;
     animation-name: slideInRight;
 }
@@ -251,7 +254,7 @@ a{
     font-size: 14px;
     font-weight: bold;
     margin-right: 5px;
-    animation-duration: 1.2em;
+    animation-duration: 1.2s;
     animation-fill-mode: both;
     animation-name: fadeInLeft;
 }
@@ -263,7 +266,7 @@ a{
     border:2px solid white;
     margin-right: 15px;
     transition: 0.5s background-color;
-    animation-duration: 1.2em;
+    animation-duration: 1.2s;
     animation-fill-mode: both;
     animation-name: fadeInUp;
 }
@@ -274,7 +277,46 @@ a{
     display: inline-block;
     font-size: 20px;
     font-weight: 700;
-    animation-duration: 1.2em;
+    animation-duration: 1.2s;
     animation-fill-mode: both;
+    animation-name: slideInRight;
+}
+.fadeInLeft{
+    animation-name: fadeInLeft;
+}
+.fadeInUp{
     animation-name: fadeInUp;
+}
+.slideInRight{
+    animation-name: slideInRight;
+}
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translate3d(0,100%,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+@keyframes slideInRight{
+    from{
+        transform: translate3d(100%,0,0);
+        visibility: visible;
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+@keyframes fadeInLeft{
+    from{
+        opacity: 0;
+        transform: translate3d(-100%,0,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
 }
